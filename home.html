@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>Zikai's MHI1001Website</title>
+		<style>
+		.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+	</head>
+
+	<body>
+        <div class="topnav">
+           
+           <a class="active" href="home.html">Home</a>
+           <a href="Nov1stclass.html">About Me</a>
+           <a href="https://www.linkedin.com/in/zikai-hao-642128201/">My Linkdein Page</a>
+           <a href="Contactme.html">Contact Me</a>
+           <a href="Gallery.html">Gallery</a>
+        </div>
+<br><br><br>
+		<h1><center>Welcome to my MHI1001 Website!</center></h1>
+<br><br>
+		<h2><center><font size="+1">Hi there! My name is Zikai! <br> I am very happy to welcome you on board with MHI2001! <br>
+		Let's Go!!!</font></center></h2>
+
+			<br><br><br><br><br><br>
+		<center><img src="https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/what-is-web-hosting1600350603508672.jpg" width="500" height="300"></center>
+<br>
+<br>
+<br>
+<br>
+		<center><a href="https://www.google.com"> Go to Google!</a></center>
+	<script type = "text/javascript">
+
+/***********************************************
+* Display time of last visit script- by JavaScriptKit.com
+* This notice MUST stay intact for use
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
+***********************************************/
+
+var days = 730; // days until cookie expires = 2 years.
+var lastvisit=new Object();
+var firstvisitmsg="<center>This is your first visit to this page. Welcome!</center>"; 
+lastvisit.subsequentvisitmsg="<center>Welcome back visitor! Your last visit was on <b>[displaydate]</b></center>";
+
+lastvisit.getCookie=function(Name){ 
+var re=new RegExp(Name+"=[^;]+", "i"); 
+if (document.cookie.match(re)) 
+return document.cookie.match(re)[0].split("=")[1];
+return''; 
+}
+
+lastvisit.setCookie=function(name, value, days){ 
+var expireDate = new Date();
+
+var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days));
+document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
+}
+
+lastvisit.showmessage = function() {
+var wh = new Date();
+if (lastvisit.getCookie("visitc") == "") { 
+lastvisit.setCookie("visitc", wh, days); 
+document.write(firstvisitmsg);
+}
+
+else {
+var lv = lastvisit.getCookie("visitc");
+var lvp = Date.parse(lv);
+var now = new Date();
+now.setTime(lvp);
+var day = new Array("Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat");
+var month = new Array ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var dd = now.getDate();
+var dy = now.getDay();
+dy = day[dy];
+var mn = now.getMonth();
+mn = month[mn];
+yy = now.getFullYear();
+var hh = now.getHours();
+var ampm = "AM";
+if (hh >= 12) {ampm = "PM"}
+if (hh >12){hh = hh - 12};
+if (hh == 0) {hh = 12}
+if (hh < 10) {hh = "0" + hh};
+var mins = now.getMinutes();
+if (mins < 10) {mins = "0"+ mins}
+var secs = now.getSeconds();
+if (secs < 10) {secs = "0" + secs}
+var dispDate = dy + ", " + mn + " " + dd + ", " + yy + " " + hh + ":" + mins + ":" + secs + " " + ampm
+document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate))
+}
+
+lastvisit.setCookie("visitc", wh, days);
+
+}
+
+lastvisit.showmessage();
+
+</script></body>
+
+	
+</html>
+
+
+
